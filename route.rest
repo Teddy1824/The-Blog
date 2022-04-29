@@ -1,0 +1,53 @@
+GET http://localhost:5000/posts
+
+
+###
+
+GET http://localhost:5000/users
+
+
+###
+
+
+POST http://localhost:5000/posts/create
+Content-Type: application/json
+
+{
+    "title": "kjhg",
+    "subtitle": "uiyurt",
+    "desc": "imyuntgrvf",
+    "category": ",umyjntbg"
+}
+
+
+###
+
+POST http://localhost:5000/users/signup
+Content-Type: application/json
+
+{
+    "username": "kohosfbj",
+    "email": "kohonak856@pantabi.com",
+    "password": "123456789"
+}
+
+###
+
+POST http://localhost:5000/users/signin
+Content-Type: application/json
+
+{
+    "username": "asddfh",
+    "email": "sasdf@gmail.com"
+}
+###
+
+DELETE http://localhost:5000/posts/626a48b92dc8f7ef2bd8860d
+
+
+###
+
+DELETE http://localhost:5000/users/626a4304ea036aefcbbb4c7c
+
+
+###
