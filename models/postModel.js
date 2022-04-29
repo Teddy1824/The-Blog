@@ -36,15 +36,16 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    // reactions: [
-    //   {
-    //     icon: '',
-    //     name: "like",
-    //     liked_by: [
+    reactions: [
+      {
+        type: String,
+        icon: '',
+        name: "like",
+        liked_by: [
 
-    //     ]
-    //   },
-    // ]
+        ]
+      },
+    ]
   },
   { timestamps: true }
 );

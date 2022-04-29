@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
 //Login
 
 router.post("/signin", async (req, res) => {
@@ -26,6 +27,7 @@ router.post("/signin", async (req, res) => {
       if (!verifyEmail) return res.status(401).send({ message: err.message });
       if (!user) return res.sendStatus(404);
       const passMatch = bcrypt.compareSync(req.body.password, user.password);
+      console.log(passMatch)
       if (!passMatch) return res.sendStatus(404);
       const authToken = jwt.sign({ _id: user._id }, process.env.access);
       if (!authToken) return res.sendStatus(401);

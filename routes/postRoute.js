@@ -83,29 +83,29 @@ router.delete(
 );
 
 //Add Reaction
-// router.post("/:id/reaction", [verifyAcc, retrieveUser], async (req, res, next) => {
-//   const{reaction} = req.body;
-//   const post = await this.post.findById(req.params.id);
+router.post("/:id/reaction", [verifyAcc, retrieveUser], async (req, res, next) => {
+  const{reaction} = req.body;
+  const post = await this.post.findById(req.params.id);
 
-//   const InCart = cart.some((item) => {
-//     return item._id.toString() == users._id.toString();
-//   });
-//   if(inCart) {
-//     const cartItem = cart.find(
-//       (item) => item._id.toString() === users._id.toString()
-//     );
-//     cartItem.quantity += quantity;
-//   }else {
-//     const cartItem = { ...users._doc, quantity };
-//     cart.push(cartItem);
-//   }
-//   try {
-//     res.users.markModified("liked_by");
-//     const updatedUser = await res.users.save();
-//     res.stsus(200).json({ cart: updatedUser.cart });
-//   } catch (err) {
-// console.log(err)
-//   }
-// });
+  const InCart = cart.some((item) => {
+    return item._id.toString() == users._id.toString();
+  });
+  if(inCart) {
+    const cartItem = cart.find(
+      (item) => item._id.toString() === users._id.toString()
+    );
+    cartItem.quantity += quantity;
+  }else {
+    const cartItem = { ...users._doc, quantity };
+    cart.push(cartItem);
+  }
+  try {
+    res.users.markModified("liked_by");
+    const updatedUser = await res.users.save();
+    res.stsus(200).json({ cart: updatedUser.cart });
+  } catch (err) {
+console.log(err)
+  }
+});
 
 module.exports = router;
