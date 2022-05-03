@@ -1,5 +1,5 @@
-const dotenv = require("dotenv");
-dotenv.config();
+// const dotenv = require("dotenv");
+// dotenv.config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -10,7 +10,7 @@ const contactRoute = require("./routes/contactRoute");
 const gamingRoute = require("./routes/gamingRoute");
 const lifestyleRoute = require("./routes/lifestyleRoute");
 const musicRoute = require("./routes/musicRoute");
-const techRoute = require("./routes/techRoute")
+const techRoute = require("./routes/techRoute");
 const cors = require("cors");
 
 app.use(cors());
