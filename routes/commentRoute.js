@@ -3,8 +3,7 @@ const comment = require("../models/commentModel");
 const { retrievePost } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
-// const dotenv = require("dotenv");
-// dotenv.config();
+
 
 //Comment Section
 

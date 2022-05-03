@@ -3,8 +3,7 @@ const post = require("../models/postModel");
 const { retrievePost } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
-// const dotenv = require("dotenv");
-// dotenv.config();
+
 
 //Blog posts
 

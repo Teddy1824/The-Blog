@@ -3,8 +3,7 @@ const game = require("../models/gamingModel");
 const { retrieveGame } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
-// const dotenv = require("dotenv");
-// dotenv.config();
+
 
 router.get("/", async (req, res) => {
     try {
