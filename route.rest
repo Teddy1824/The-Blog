@@ -1,6 +1,8 @@
-GET http://localhost:5000/posts/
+GET http://localhost:5000/tech
 
+###
 
+GET http://localhost:5000/lifestyles
 ###
 
 GET http://localhost:5000/users/
@@ -52,3 +54,13 @@ DELETE http://localhost:5000/users/626a4304ea036aefcbbb4c7c
 
 
 ###
+
+POST http://localhost:5000/id/reaction
+Content-Type: application/json
+
+{
+    "title": "kjhg",
+    "subtitle": "uiyurt",
+    "desc": "imyuntgrvf",
+    "category": ",umyjntbg"
+}
