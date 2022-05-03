@@ -15,11 +15,11 @@ router.get("/", async (req, res) => {
     }
   });
 
-  router.get("/:id", retrievePost, (req, res) => {
+  router.get("/:id", retrieveGame, (req, res) => {
     res.send(res.game);
   });
   
-  router.post("/games", [verifyAcc, retrieveUser], async (req, res) => {
+  router.post("/games", [verifyAcc, retrieveGame], async (req, res) => {
     let userName = res.user.username;
     let userProfile = res.user.profile;
     const newGame = new game({
