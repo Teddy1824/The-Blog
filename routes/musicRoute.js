@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const music = require("../models/musicModel");
-const { retrievePost } = require("../middleware/retriever");
+const { retrieveMusic } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
 
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     }
   });
 
-  router.get("/:id", retrievePost, (req, res) => {
+  router.get("/:id", retrieveMusic, (req, res) => {
     res.send(res.music);
   });
   

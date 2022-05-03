@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const lifestyle = require("../models/lifestyleModel");
-const { retrievePost } = require("../middleware/retriever");
+const { retrieveLifestyle } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
 
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     }
   });
 
-  router.get("/:id", retrievePost, (req, res) => {
+  router.get("/:id", retrieveLifestyle, (req, res) => {
     res.send(res.lifestyle);
   });
   

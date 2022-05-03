@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const game = require("../models/gamingModel");
-const { retrievePost } = require("../middleware/retriever");
+const { retrieveGame } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
 // const dotenv = require("dotenv");
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
     res.send(res.game);
   });
   
-  router.post("/games", [verifyAcc, retrieveGame], async (req, res) => {
+  router.post("/games", [verifyAcc, retrieveUser], async (req, res) => {
     let userName = res.user.username;
     let userProfile = res.user.profile;
     const newGame = new game({

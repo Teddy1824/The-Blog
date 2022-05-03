@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const tech = require("../models/techmodel");
-const { retrievePost } = require("../middleware/retriever");
+const { retrieveTech } = require("../middleware/retriever");
 const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
 
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
     }
   });
 
-  router.get("/:id", retrievePost, (req, res) => {
+  router.get("/:id", retrieveTech, (req, res) => {
     res.send(res.tech);
   });
   
