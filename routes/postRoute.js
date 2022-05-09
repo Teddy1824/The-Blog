@@ -5,6 +5,7 @@ const { retrieveUser } = require("../middleware/retriever");
 const verifyAcc = require("../middleware/authJWT");
 
 
+
 //Blog posts
 
 router.get("/", async (req, res) => {

@@ -7,6 +7,7 @@ const { retrieveUser } = require("../middleware/retriever.js");
 const verifyAcc = require("../middleware/authJWT");
 const nodemailer = require("nodemailer");
 
+
 //Register
 router.get("/", async (req, res) => {
   try {
