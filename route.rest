@@ -1,24 +1,26 @@
+GET https://the-anything-blog1.herokuapp.com/lifestyles
+
+###
+
 GET http://localhost:5000/tech
-
 ###
 
-GET http://localhost:5000/lifestyles
-###
-
-GET http://localhost:5000/users/
+GET https://the-anything-blog1.herokuapp.com/users/
 
 
 ###
 
 
-POST http://localhost:5000/posts/create
+POST http://localhost:5000/lifestyles/lifestyles
+Authorization: bearer- eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjZhODIzMTVlMzE2MmQxMmMwZjFmY2UiLCJpYXQiOjE2NTIxODQwMTR9.LdI9A3yAQIgpBREZm4C-OX2m4q7s_TwTdBjjEzidYwU
 Content-Type: application/json
 
 {
-    "title": "kjhg",
-    "subtitle": "uiyurt",
-    "desc": "imyuntgrvf",
-    "category": ",umyjntbg"
+    "main_image": "https://i.postimg.cc/PqjKcDc4/download.webp",
+    "title": "Vape tricks",
+    "subtitle": "vape",
+    "desc": "idk",
+    "category": "lifestyle"
 }
 
 
@@ -45,8 +47,9 @@ authorization: authHeader
 }
 ###
 
-DELETE http://localhost:5000/posts/626a48b92dc8f7ef2bd8860d
-
+DELETE http://localhost:5000/lifestyles/627bbecae19a11aa14f40eb5
+Authorization: bearer- eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjZhODIzMTVlMzE2MmQxMmMwZjFmY2UiLCJpYXQiOjE2NTIxODQwMTR9.LdI9A3yAQIgpBREZm4C-OX2m4q7s_TwTdBjjEzidYwU
+Content-Type: application/json
 
 ###
 

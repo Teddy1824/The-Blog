@@ -38,4 +38,22 @@ router.get("/", async (req, res) => {
     }
   });
 
+  router.delete(
+    "/:id",
+    [verifyAcc, retrieveGame, retrieveUser],
+    async (req, res) => {
+      if (res.user.username !== res.game.created_by) {
+        return res
+          .status(401)
+          .send({ message: "You are not authorized to delete this post." });
+      }
+      try {
+        await res.game.remove();
+        res.status(200).send({ message: "Post deleted successfully." });
+      } catch (error) {
+        res.status(500).send({ message: error.message });
+      }
+    }
+  );
+
   module.exports = router;
