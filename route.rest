@@ -1,4 +1,4 @@
-GET https://the-anything-blog1.herokuapp.com/lifestyles
+GET https://the-anything-blog1.herokuapp.com/games
 
 ###
 
@@ -11,7 +11,7 @@ GET https://the-anything-blog1.herokuapp.com/users/
 ###
 
 
-POST http://localhost:5000/lifestyles/lifestyles
+POST https://the-anything-blog1.herokuapp.com/music/music
 Authorization: bearer- eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjZhODIzMTVlMzE2MmQxMmMwZjFmY2UiLCJpYXQiOjE2NTIxODQwMTR9.LdI9A3yAQIgpBREZm4C-OX2m4q7s_TwTdBjjEzidYwU
 Content-Type: application/json
 
