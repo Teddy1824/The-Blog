@@ -104,37 +104,41 @@
         :key="techs._id"
         class="grid grid-cols-3 grid-rows-3 md:grid-cols-6 sm:grid-cols-12 grid-flow-row justify-center"
       >
-    
-<div class="container">
-        </div>
-        <div class="card">
-    <div class="img-container" :style="{ background: `url(${techs.main_image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}"></div>
-    <div class="card-content">
-      <h1>{{ techs.title }}</h1>
-      <h2>{{techs.subtitle}}</h2>
-      <p class="excerpt">{{techs.desc}}</p>
-      <p class="author"> <img
-                  :src="techs.user_image"
-                  alt="user__image"
-                  class="user__image"
-                />{{techs.created_by}}
+        <div class="container"></div>
+        <div class="card center">
+          <div
+            class="img-container"
+            :style="{
+              background: `url(${techs.main_image})`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }"
+          ></div>
+          <div class="card-content">
+            <h1>{{ techs.title }}</h1>
+            <h2>{{ techs.subtitle }}</h2>
+            <p class="excerpt">{{ techs.desc }}</p>
+            <p class="author">
+              <img
+                :src="techs.user_image"
+                alt="user__image"
+                class="user__image"
+              />{{ techs.created_by }}
               <router-link
-              :to="{
-                name: 'techdetails',
-                params: {
-                  id: techs._id,
-                },
-              }"
-            >
-              <div class="make-button">
-                <button>View Blog</button>
-              </div>
-            </router-link>
-      </p>
- 
-    </div>
-  </div>
-
+                :to="{
+                  name: 'techdetails',
+                  params: {
+                    id: techs._id,
+                  },
+                }"
+              >
+                <div class="make-button">
+                  <button>View Blog</button>
+                </div>
+              </router-link>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -182,6 +186,7 @@ export default {
   },
 
   mounted() {
+    console.log("Mounting");
     fetch("https://the-anything-blog1.herokuapp.com/tech", {
       method: "GET",
       headers: {
@@ -252,7 +257,7 @@ export default {
   min-height: 50vh;
   margin: 0;
   padding: 0;
-  background-image: url("https://images.unsplash.com/photo-1544652478-6653e09f18a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-image: url("https://images.unsplash.com/photo-1544256718-3bcf237f3974?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -376,6 +381,8 @@ button {
   border-radius: 1em;
   background: #ece9e6;
   background: linear-gradient(to right, #ffffff, #ece9e6);
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
 }
 
 .card__body {
@@ -440,14 +447,13 @@ p {
 
 .user {
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 .user__image {
   border-radius: 50%;
-  max-height: 40px;
+  max-height: 50px;
 }
-
 
 .user__info > small {
   color: #666;
@@ -541,10 +547,18 @@ p {
     font-size: 12px;
   }
 }
+
+/* .container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+} */
 .card {
   background-color: #fff;
   max-width: 800px;
-  box-shadow: 2px 2px 5px #9E9E9E, -1px -1px 5px #9E9E9E;
+  box-shadow: 2px 2px 5px #9e9e9e, -1px -1px 5px #9e9e9e;
   border-radius: 3px;
   display: grid;
   grid-template-column: repeat(5, 1fr);
@@ -553,23 +567,24 @@ p {
   width: 230px;
   /* height: 300px; */
   grid-column: 2;
-  
+
   /* background-image: url('https://www.dropbox.com/s/7d5qt5wb2xpqeww/city-street.jpg?raw=1');
-
   background-size: cover;
-
   background-position: center center; */
 }
+/* .card .img{
+  height: 600px;
+} */
 .card-content {
   grid-column: 3 / 5;
   padding: 10px 30px;
   border-left: 1px solid #ccc;
-} 
+}
 h2 {
   text-transform: uppercase;
   color: #555;
 }
- h1 {
+h1 {
   margin-bottom: 0;
 }
 /* .card-content .author {
@@ -579,8 +594,7 @@ h2 {
   padding: 25px 0 10px 0;
   color: #555;
 } */
-
- @media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .card {
     display: block;
   }
@@ -592,5 +606,5 @@ h2 {
     border: 0;
     border-top: 1px solid #ccc;
   }
-} 
+}
 </style>

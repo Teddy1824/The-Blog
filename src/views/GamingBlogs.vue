@@ -104,48 +104,42 @@
         :key="game._id"
         class="grid grid-cols-3 grid-rows-3 md:grid-cols-6 sm:grid-cols-12 grid-flow-row justify-center"
       >
-        <div class="container">
-        </div>
-        <div class="card">
-    <div class="img-container" :style="{ background: `url(${game.main_image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}"></div>
-    <div class="card-content">
-      <h1>{{ game.title }}</h1>
-      <h2>{{game.subtitle}}</h2>
-      <p class="excerpt">{{game.desc}}</p>
-      <p class="author"> <img
-                  :src="game.user_image"
-                  alt="user__image"
-                  class="user__image"
-                />{{game.created_by}}
+        <div class="container"></div>
+        <div class="card center">
+          <div
+            class="img-container"
+            :style="{
+              background: `url(${game.main_image})`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+            }"
+          ></div>
+          <div class="card-content">
+            <h1>{{ game.title }}</h1>
+            <h2>{{ game.subtitle }}</h2>
+            <p class="excerpt">{{ game.desc }}</p>
+            <p class="author">
+              <img
+                :src="game.user_image"
+                alt="user__image"
+                class="user__image"
+              />{{ game.created_by }}
               <router-link
-              :to="{
-                name: 'gamingdetails',
-                params: {
-                  id: game._id,
-                },
-              }"
-            >
-              <div class="make-button">
-                <button>View Blog</button>
-              </div>
-            </router-link>
-      </p>
- 
-    </div>
-  </div>
+                :to="{
+                  name: 'gamingdetails',
+                  params: {
+                    id: game._id,
+                  },
+                }"
+              >
+                <div class="make-button">
+                  <button>View Blog</button>
+                </div>
+              </router-link>
+            </p>
+          </div>
+        </div>
       </div>
-           <!-- <div class="container">
-  <div class="card">
-    <div class="img-container"></div>
-    <div class="card-content">
-      <h2>Hello</h2>
-      <h1>From the Other Side of the World</h1>
-      <p class="excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia odio dolorem amet, sunt magnam asperiores exercitationem consequuntur? Molestias asperiores rerum doloremque reiciendis.</p>
-      <p class="author">By Jrom</p>
-    </div>
-  </div>
-  
-</div> -->
     </div>
 
     <div v-else>
@@ -192,7 +186,7 @@ export default {
   },
 
   mounted() {
-    console.log("Mounting")
+    console.log("Mounting");
     fetch("https://the-anything-blog1.herokuapp.com/games", {
       method: "GET",
       headers: {
@@ -376,9 +370,9 @@ button {
   max-width: 100%;
   display: block;
   object-fit: cover;
-} */
+}
 
-/* .card {
+.card {
   display: flex;
   flex-direction: column;
   width: clamp(20rem, calc(20rem + 2vw), 22rem);
@@ -389,9 +383,9 @@ button {
   background: linear-gradient(to right, #ffffff, #ece9e6);
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
-} */
+}
 
-/* .card__body {
+.card__body {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -453,12 +447,12 @@ p {
 
 .user {
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 .user__image {
   border-radius: 50%;
-  max-height: 40px;
+  max-height: 50px;
 }
 
 .user__info > small {
@@ -553,8 +547,8 @@ p {
     font-size: 12px;
   }
 }
-/* .container {
 
+/* .container {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -564,7 +558,7 @@ p {
 .card {
   background-color: #fff;
   max-width: 800px;
-  box-shadow: 2px 2px 5px #9E9E9E, -1px -1px 5px #9E9E9E;
+  box-shadow: 2px 2px 5px #9e9e9e, -1px -1px 5px #9e9e9e;
   border-radius: 3px;
   display: grid;
   grid-template-column: repeat(5, 1fr);
@@ -573,27 +567,24 @@ p {
   width: 230px;
   /* height: 300px; */
   grid-column: 2;
-  
+
   /* background-image: url('https://www.dropbox.com/s/7d5qt5wb2xpqeww/city-street.jpg?raw=1');
-
   background-size: cover;
-
   background-position: center center; */
 }
 /* .card .img{
   height: 600px;
 } */
-
 .card-content {
   grid-column: 3 / 5;
   padding: 10px 30px;
   border-left: 1px solid #ccc;
-} 
+}
 h2 {
   text-transform: uppercase;
   color: #555;
 }
- h1 {
+h1 {
   margin-bottom: 0;
 }
 /* .card-content .author {
@@ -603,8 +594,7 @@ h2 {
   padding: 25px 0 10px 0;
   color: #555;
 } */
-
- @media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .card {
     display: block;
   }
@@ -616,5 +606,5 @@ h2 {
     border: 0;
     border-top: 1px solid #ccc;
   }
-} 
+}
 </style>

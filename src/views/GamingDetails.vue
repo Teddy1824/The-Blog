@@ -70,6 +70,28 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <h1>Comment:</h1>
+    <form>
+      <textarea
+        name="message"
+        id="textarea"
+        cols="30"
+        rows="10"
+        placeholder="Comment"
+      >
+      </textarea>
+      <br />
+      <button
+        tag="a"
+        href="#!"
+        color="danger"
+        @click.prevent="addComment(game._id)"
+      >
+        Add Comment
+      </button>
+    </form>
+  </div>
 
   <MDBModal
     id="exampleModal1"
@@ -252,7 +274,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .container {
   display: flex;
   flex-wrap: wrap;

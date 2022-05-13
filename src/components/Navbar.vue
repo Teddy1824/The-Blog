@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <div class="nav-icon">
-      <h2>Icon</h2>
+    <div class="nav-icon text-white">
+      <font-awesome-icon icon="fa-solid fa-block-question" />
     </div>
     <div class="nav-items">
       <a href="">
@@ -12,6 +12,17 @@
       </a>
       <a href="" @click="logout()">
         <router-link :to="{ path: '/' }">Sign Out</router-link>
+      </a>
+
+      <a href="">
+        <router-link
+          :to="{
+            name: 'profilepage',
+          }"
+          class="mobile"
+        >
+          Users Profile</router-link
+        >
       </a>
     </div>
     <div class="mobile-nav">
@@ -31,6 +42,17 @@
       </a>
       <a href="" @click="logout()">
         <router-link :to="{ path: '/' }" class="mobile">Sign Out</router-link>
+      </a>
+
+      <a href="">
+        <router-link
+          :to="{
+            name: 'profilepage',
+          }"
+          class="mobile"
+        >
+          User Profile</router-link
+        >
       </a>
     </div>
   </nav>

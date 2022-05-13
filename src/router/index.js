@@ -78,6 +78,12 @@ const routes = [
       import(/* webpackChunkName: "techdetails" */ "../views/TechDetails.vue"),
     props: true,
   },
+  {
+    path: "/profilepage",
+    name: "profilepage",
+    component: () =>
+      import(/* webpackChunkName: "profilepage" */ "../views/ProfilePage.vue"),
+  },
 ];
 
 const router = createRouter({
