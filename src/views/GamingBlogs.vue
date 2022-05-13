@@ -192,6 +192,7 @@ export default {
   },
 
   mounted() {
+    console.log("Mounting")
     fetch("https://the-anything-blog1.herokuapp.com/games", {
       method: "GET",
       headers: {
