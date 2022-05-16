@@ -172,16 +172,16 @@
                     />
                     <div class="user__info">
                       <h5>{{ techs.created_by }}</h5>
-                      <router-link
-                        :to="{
-                          name: 'techblogs',
-                        }"
-                      >
-                        <div class="make-button">
-                          <button>View</button>
-                        </div>
-                      </router-link>
                     </div>
+                    <router-link
+                      :to="{
+                        name: 'techblogs',
+                      }"
+                    >
+                      <div class="make-button">
+                        <button>View</button>
+                      </div>
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -469,7 +469,7 @@ img {
 }
 
 .card {
-  max-height: 50%;
+  max-height: 275px;
   max-width: 110%;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
   border-radius: 1em;
@@ -482,7 +482,7 @@ img {
   padding: 1rem;
   margin-top: auto;
   max-width: 100%;
-  max-height: 100px;
+  max-height: 100pxs;
 }
 
 .user {
@@ -544,6 +544,7 @@ img {
 
 .img1 {
   width: 100%;
+  max-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -557,6 +558,7 @@ img {
 
 .img2 {
   width: 100%;
+  max-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -570,10 +572,11 @@ img {
 
 .img3 {
   width: 100%;
+  max-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin-bottom: 0;
   padding: 0;
   background-image: url("https://images.unsplash.com/photo-1461784180009-21121b2f204c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   background-repeat: no-repeat;
@@ -583,6 +586,7 @@ img {
 
 .img4 {
   width: 100%;
+  max-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;

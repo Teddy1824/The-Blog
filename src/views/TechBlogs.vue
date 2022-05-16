@@ -559,14 +559,14 @@ p {
   background-color: #fff;
   max-width: 800px;
   box-shadow: 2px 2px 5px #9e9e9e, -1px -1px 5px #9e9e9e;
-  border-radius: 3px;
+  border-radius: 10px;
   display: grid;
-  grid-template-column: repeat(5, 1fr);
 }
 .card .img-container {
   width: 230px;
   /* height: 300px; */
   grid-column: 2;
+  border-radius: 10px;
 
   /* background-image: url('https://www.dropbox.com/s/7d5qt5wb2xpqeww/city-street.jpg?raw=1');
   background-size: cover;

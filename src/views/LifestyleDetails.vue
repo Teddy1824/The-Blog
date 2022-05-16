@@ -280,12 +280,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
+
   margin-block: 2rem;
   gap: 2rem;
 }
